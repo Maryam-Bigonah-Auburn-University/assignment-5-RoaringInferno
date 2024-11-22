@@ -11,6 +11,10 @@ add_executable(exercise-2)
 file(GLOB_RECURSE EXERCISE_2_SOURCES "exercise-2/*.cpp")
 target_sources(exercise-2 PRIVATE ${EXERCISE_2_SOURCES})
 
-#add_executable(exercise-3)
-#file(GLOB_RECURSE EXERCISE_3_SOURCES "exercise-3/*.cpp")
-#target_sources(exercise-3 PRIVATE ${EXERCISE_3_SOURCES})
+add_executable(exercise-3)
+file(GLOB_RECURSE EXERCISE_3_SOURCES "exercise-3/*.cpp")
+target_sources(exercise-3 PRIVATE ${EXERCISE_3_SOURCES})
+
+add_executable(exercise-4)
+file(GLOB_RECURSE EXERCISE_4_SOURCES "exercise-4/*.cpp")
+target_sources(exercise-4 PRIVATE ${EXERCISE_4_SOURCES})
