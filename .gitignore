@@ -1,0 +1,39 @@
+# Ignore object files, shared libraries, and executables
+*.o
+*.obj
+*.so
+*.exe
+*.out
+*.a
+*.lib
+*.dll
+
+# Ignore build directories
+/build/
+/bin/
+/lib/
+/out/
+
+# Ignore CLion specific files
+.idea/
+cmake-build-*/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+
+# Ignore generated files
+Makefile
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+CTestTestfile.cmake
+cmake_install.cmake
