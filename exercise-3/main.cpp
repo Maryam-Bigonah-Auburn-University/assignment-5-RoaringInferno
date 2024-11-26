@@ -49,36 +49,15 @@ int main()
 
 void merge_lines(std::ifstream &input_file_1, std::ifstream &input_file_2, std::ofstream &output_file)
 {
-    class merged_num_string
-    {
-    private:
-        std::string num_string;
-    public:
-        std::string to_string() const { return num_string; }
-
-        merged_num_string(std::string_view num1, std::string_view num2)
-        {
-            if (num1.empty())
-            {
-                num_string = std::string(num2);
-            }
-            else if (num2.empty())
-            {
-                num_string = std::string(num1);
-            }
-            else
-            {
-                num_string = std::string(num1) + " " + std::string(num2);
-            }
-        }
-    };
-
-    std::string line1, line2;
     std::vector<int> merged_nums;
-    while (std::getline(input_file_1, line1) && std::getline(input_file_2, line2)) // read lines from both files
+    std::string line;
+    while (std::getline(input_file_1, line))
     {
-        merged_num_string merged_num(line1, line2);
-        merged_nums.push_back(std::stoi(merged_num.to_string())); // convert to int and store in vector
+        merged_nums.push_back(std::stoi(line));
+    }
+    while (std::getline(input_file_2, line))
+    {
+        merged_nums.push_back(std::stoi(line));
     }
 
     std::sort(merged_nums.begin(), merged_nums.end()); // sorted in ascending order
